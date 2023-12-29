@@ -23,9 +23,12 @@ fetchCurrency.then(response=>{
       createElement.appendChild(value) 
 
       createElement.classList.add('currency')
+      title.classList.add('title')
+      value.classList.add('value')
+
       title.innerHTML = currency[0]
       value.innerHTML = currency[1].sell
-      createElement.style.left = index * (100/4) + "%"
+      createElement.style.left = index * (100/3) + "%"
 
       currencys.push(createElement)
     })
@@ -35,9 +38,8 @@ fetchCurrency.then(response=>{
   let sliderCount = 0
   function sliderHandler(){
     elementosHTML.forEach(elemento=>{
-      elemento.style.transform = `translateX(-${sliderCount * 400}%)`
+      elemento.style.transform = `translateX(-${sliderCount * 100}%)`
     })
-    sliderCount === 6 ? nextBtn.style.display = "none" : nextBtn.style.display = "block"
   }
 
   function next(){

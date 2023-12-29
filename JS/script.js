@@ -33,22 +33,23 @@ fetchCurrency.then(response=>{
 })
 .then(elementosHTML => {
   let sliderCount = 0
-  
   function sliderHandler(){
-    elementosHTML.forEach((elemento)=>{
-      elemento.style.transform = `translateX(-${sliderCount * 100}%)`
+    elementosHTML.forEach(elemento=>{
+      elemento.style.transform = `translateX(-${sliderCount * 400}%)`
     })
+    sliderCount === 6 ? nextBtn.style.display = "none" : nextBtn.style.display = "block"
   }
-  
+
   function next(){
     sliderCount++
     sliderHandler()
   }
+
   function previous(){
     sliderCount--
     sliderHandler()
   }
-
+  
   nextBtn.addEventListener('click', next)
   previousBtn.addEventListener('click', previous)
 })

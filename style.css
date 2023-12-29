@@ -25,22 +25,35 @@
   position: relative;
   width: 100%;
   height: 100px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-evenly;
   
 }
 
 .painel-moedas-box{
   position: relative;
-  width: 100%;
+  width: 1200px;
+  max-width: 100%;
   height: 100%;
+  display: flex;
+  overflow: hidden;
 }
 
 .currency{
   position: absolute;
   top:0;
-  width: 23%;
+  width: 25%;
   height: 100%;
   padding:15px;
   background-color: blue;
-  text-align: center;;
+  text-align: center;
+  border:5px solid #ffffff;
+  border-top: none;
+  transition: 0.3s;
+}
+
+.proximo, .anterior{
+  cursor: pointer;
 }

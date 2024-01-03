@@ -29,9 +29,9 @@ function converterHandler(BTC){
         painelConvesor.appendChild(createElement)
         createElement.innerHTML = BTC[index][0]+": "+ calculo 
       } else {
-        let teste = document.querySelectorAll('.convertido')
-        teste.forEach((item, index)=>{
-          let novoCalculo = BTC[index][0]+": "+ Number(BTCvalue * BTC[index][1].sell).toFixed(1)
+        let novoValor = document.querySelectorAll('.convertido')
+        novoValor.forEach((item, index)=>{
+          let novoCalculo = BTC[index][0]+": "+ Number(BTCvalue * BTC[index][1].sell).toFixed(0)
           item.innerHTML = novoCalculo
         })
       }

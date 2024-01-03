@@ -22,7 +22,7 @@ function fetchBTCconversorMoeda(){
 function converterHandler(BTC){
   let BTCvalue = conversorInput.value
     BTC.forEach((item, index)=>{
-      let calculo = Number(BTCvalue * BTC[index][1].sell)
+      let calculo = Number(BTCvalue * BTC[index][1].sell).toFixed(0)
       if((verificador === false )){
         let createElement = document.createElement('p')
         createElement.classList.add('moedaBTC-conversor', 'convertido')
@@ -31,7 +31,7 @@ function converterHandler(BTC){
       } else {
         let teste = document.querySelectorAll('.convertido')
         teste.forEach((item, index)=>{
-          let novoCalculo = BTC[index][0]+": "+ Number(BTCvalue * BTC[index][1].sell)
+          let novoCalculo = BTC[index][0]+": "+ Number(BTCvalue * BTC[index][1].sell).toFixed(1)
           item.innerHTML = novoCalculo
         })
       }

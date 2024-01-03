@@ -38,6 +38,11 @@ function estilizando(){
 function slideHandle(){
   moeda.forEach(item=>{
     item.style.transform = `translateX(-${counterSlide * 100}%)`
+    if(counterSlide > 25){
+      item.style.transform = `translateX(-${25 * 100}%)`
+    } else {
+      item.style.transform = `translateX(-${counterSlide * 100}%)`
+    }
   })
 }
 

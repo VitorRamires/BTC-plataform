@@ -1,58 +1,60 @@
-const fetchCurrency = fetch('https://blockchain.info/ticker')
 const painelMoedasBox = document.querySelector('.painel-moedas-box')
 const nextBtn = document.querySelector('.proximo')
 const previousBtn = document.querySelector('.anterior')
+const moedaTitle = Array.from(document.querySelectorAll('.title'))
+const moedaValue = Array.from(document.querySelectorAll('.value'))
+const moeda = Array.from(document.querySelectorAll('.moeda'))
+const proximo = document.querySelector('.proximo')
+const anterior = document.querySelector('.anterior')
+let counterSlide = 0
 
-fetchCurrency.then(response=>{
-  return response.json()
-})
-.then(responseJson => {
-  let allCurrencys = responseJson
-  return allCurrencys
-})
-.then((allCurrencys) => {
-    let currencysKeys = Object.entries(allCurrencys)
-    let currencys = []
-    currencysKeys.forEach((currency, index)=>{
-      const createElement = document.createElement('div')
-      const title = document.createElement('h3')
-      const value = document.createElement('p')
-
-      painelMoedasBox.appendChild(createElement)
-      createElement.appendChild(title)
-      createElement.appendChild(value) 
-
-      createElement.classList.add('currency')
-      title.classList.add('title')
-      value.classList.add('value')
-
-      title.innerHTML = currency[0]
-      value.innerHTML = currency[1].sell
-      createElement.style.left = index * (100/3) + "%"
-
-      currencys.push(createElement)
+function fetchValue(){
+fetch('https://blockchain.info/ticker')
+.then(response=>{
+    let responseJson = response.json()
+    return responseJson
+  })
+  .then(responseJson => {
+    let allCurrencys = responseJson
+    return allCurrencys
+  })
+  .then((allCurrencys) => {
+    let arrayCurrencys = Object.entries(allCurrencys) 
+    moedaTitle.forEach((item, index)=>{
+      item.innerHTML = arrayCurrencys[index][0]
     })
-    return currencys
-})
-.then(elementosHTML => {
-  let sliderCount = 0
-  function sliderHandler(){
-    elementosHTML.forEach(elemento=>{
-      elemento.style.transform = `translateX(-${sliderCount * 100}%)`
+    moedaValue.forEach((item, index)=>{
+      item.innerHTML = arrayCurrencys[index][1].sell
     })
-  }
+  })
+}
 
-  function next(){
-    sliderCount++
-    sliderHandler()
-  }
+function estilizando(){
+  moeda.forEach((item, index)=>{
+    item.style.left = index * 33 + '%'
+  })
+}
 
-  function previous(){
-    sliderCount--
-    sliderHandler()
-  }
-  
-  nextBtn.addEventListener('click', next)
-  previousBtn.addEventListener('click', previous)
-})
+function slideHandle(){
+  moeda.forEach(item=>{
+    item.style.transform = `translateX(-${counterSlide * 100}%)`
+  })
+}
 
+function next(){
+  counterSlide++
+  console.log(counterSlide)
+  slideHandle()
+}
+
+function previous(){
+  counterSlide--
+  slideHandle()
+}
+
+
+estilizando()
+fetchValue()
+setInterval(fetchValue, 500)
+proximo.addEventListener('click',()=>{next()})
+anterior.addEventListener('click', ()=>{previous()})

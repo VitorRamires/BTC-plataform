@@ -1,4 +1,4 @@
- const moedaTitle = Array.from(document.querySelectorAll('.title'))
+  const moedaTitle = Array.from(document.querySelectorAll('.title'))
   const moedaValue = Array.from(document.querySelectorAll('.value'))
   const moeda = Array.from(document.querySelectorAll('.moeda'))
   const proximo = document.querySelector('.proximo')
@@ -7,12 +7,13 @@
   let counterSlide = 0
   let windowMatchMedia = window.matchMedia("(max-width:680px)")
 
-  function fetchValue(){
-  fetch('https://blockchain.info/ticker')
-  .then(response=>{
+
+  function fetchValueMostrarMoeda(){
+   fetch('https://blockchain.info/ticker')
+   .then(response=>{
       let responseJson = response.json()
       return responseJson
-    })
+     })
     .then(responseJson => {
       let allCurrencys = responseJson
       return allCurrencys
@@ -28,6 +29,7 @@
     })
   }
 
+ 
   function estilizando(){
     moeda.forEach((item, index)=>{
       item.style.left = index * 33 + '%'
@@ -71,9 +73,9 @@
     slideHandle()
   }
 
-  estilizando()
-  fetchValue()
-  setInterval(fetchValue, 5000)
+  estilizando(), fetchValueMostrarMoeda()
+  setInterval(fetchValueMostrarMoeda, 5000)
   proximo.addEventListener('click',()=>{next()})
   anterior.addEventListener('click', ()=>{previous()})
+
 

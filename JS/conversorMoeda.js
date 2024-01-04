@@ -22,8 +22,8 @@ function fetchBTCconversorMoeda(){
 function converterHandler(BTC){
   let BTCvalue = conversorInput.value
   if(BTCvalue === '' || BTCvalue === '0'){
+    alert('Preencha corretamente')
     conversorInput.value = ''
-    alert('Preencha o campo')
   } else {
     BTC.forEach((item, index)=>{
       let calculo = Number(BTCvalue * BTC[index][1].sell).toFixed(0)
@@ -33,7 +33,7 @@ function converterHandler(BTC){
         let value = document.createElement('p')
 
         createElement.classList.add('moedaBTC-conversor', 'showOn', 'convertido')
-        title.classList.add('title')
+        title.classList.add('title-conversor')
         value.classList.add('value-conversor')
 
         painelConvesor.appendChild(createElement)
@@ -50,8 +50,8 @@ function converterHandler(BTC){
         })
       }
     })
+    verificador = true
   }
-  verificador = true
 }
 
 

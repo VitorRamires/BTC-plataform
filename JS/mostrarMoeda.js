@@ -45,19 +45,9 @@
     moeda.forEach(item=>{
       item.style.transform = `translateX(-${counterSlide * 100}%)`
       if(windowMatchMedia.matches){
-        if(counterSlide > 27){
-          item.style.transform = `translateX(-${27 * 100}%)`
-        } else {
-          item.style.transform = `translateX(-${counterSlide * 100}%)`
-          barraProgresso.style.width = counterSlide * 3.7 + '%'
-        }
+        counterSlide > 27 ? counterSlide = 27 : barraProgresso.style.width = counterSlide * 3.7 + '%'
       } else {
-        if(counterSlide > 25){
-          item.style.transform = `translateX(-${25 * 100}%)`
-        } else {
-          item.style.transform = `translateX(-${counterSlide * 100}%)`
-          barraProgresso.style.width = counterSlide * 4 + '%'
-        }
+        counterSlide > 25 ? counterSlide = 25 : barraProgresso.style.width = counterSlide * 4 + '%'
       }
     })
   }
@@ -65,12 +55,13 @@
   function next(){
     counterSlide++
     slideHandle()
+    console.log(counterSlide)
   }
 
   function previous(){
-    counterSlide--
-    barraProgresso.style.width = counterSlide * 10 + '%'
+    counterSlide === 0 ? counterSlide = 0 : counterSlide--
     slideHandle()
+    console.log(counterSlide)
   }
 
   estilizando(), fetchValueMostrarMoeda()

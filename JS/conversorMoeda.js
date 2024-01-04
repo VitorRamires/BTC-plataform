@@ -21,22 +21,37 @@ function fetchBTCconversorMoeda(){
 
 function converterHandler(BTC){
   let BTCvalue = conversorInput.value
+  if(BTCvalue === '' || BTCvalue === '0'){
+    conversorInput.value = ''
+    alert('Preencha o campo')
+  } else {
     BTC.forEach((item, index)=>{
       let calculo = Number(BTCvalue * BTC[index][1].sell).toFixed(0)
       if((verificador === false )){
-        let createElement = document.createElement('p')
-        createElement.classList.add('moedaBTC-conversor', 'convertido')
+        let createElement = document.createElement('div')
+        let title = document.createElement('p')
+        let value = document.createElement('p')
+
+        createElement.classList.add('moedaBTC-conversor', 'showOn', 'convertido')
+        title.classList.add('title')
+        value.classList.add('value-conversor')
+
         painelConvesor.appendChild(createElement)
-        createElement.innerHTML = BTC[index][0]+": "+ calculo 
+        createElement.appendChild(title)
+        createElement.appendChild(value)
+
+        value.innerHTML = calculo 
+        title.innerHTML = BTC[index][0]
       } else {
-        let novoValor = document.querySelectorAll('.convertido')
+        let novoValor = document.querySelectorAll('.value-conversor')
         novoValor.forEach((item, index)=>{
-          let novoCalculo = BTC[index][0]+": "+ Number(BTCvalue * BTC[index][1].sell).toFixed(0)
+          let novoCalculo = Number(BTCvalue * BTC[index][1].sell).toFixed(0)
           item.innerHTML = novoCalculo
         })
       }
     })
-    verificador = true
+  }
+  verificador = true
 }
 
 

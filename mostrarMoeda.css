@@ -60,6 +60,7 @@
   position: absolute;
   bottom:0;
   left:0;
+  width: 1%;
   height: 7px;
   background-color: #FFA800;
   transition: 0.2s;
@@ -86,6 +87,12 @@
   align-items: center;
   justify-content: center;
   padding: 0 15px;
+  transition: 0.25s;
+}
+
+.botao:hover{
+  background-color: #7e7e7e;
+  transition: 0.25s;
 }
 
 .anterior{

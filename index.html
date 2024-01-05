@@ -135,6 +135,7 @@
       <img src="./icons/arrow-right-short.svg" alt="">
     </div>
   </section>
+
   <section class="BTC-para-moeda">
     <div class="input-body">
       <div class="titulo-input">
@@ -150,9 +151,35 @@
     </div>
     <div class="conversor-painel"></div>
   </section>
+
+  <section class="moeda-para-BTC">
+    <div class="title-conversor-MoedaBTC">
+      <h3>Coversor para BTC</h3>
+    </div>
+    <div class="conversor-moeda-BTC">
+      <div class="moeda-informacoes">
+        <div class="valor-moeda">
+          <h3>Valor</h3>
+          <label for="moedaValor"></label>
+          <input type="number" id="moedaValor">
+        </div>
+        <div class="selecionar-moeda">
+          <select name="moedasDisponiveis" id="moedasDisponiveis"></select>
+        </div>
+      </div>
+      <div class="botao-converterMoeda">
+        <img src="./icons/arrow-right-converter.svg" alt="">
+      </div>
+      <div class="resposta-BTC-box">
+        <p>BTC</p>
+        <p class="resposta-BTC"></p>
+      </div>
+    </div>
+  </section>
 </main>
 
 <script src="JS/mostrarMoeda.js"></script>
 <script src="JS/conversorMoeda.js"></script>
+<script src="JS/conversorBTC.js"></script>
 </body>
 </html>

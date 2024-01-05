@@ -1,5 +1,6 @@
-@import "/mostrarMoeda.css";
-@import "/conversorMoeda.css";
+@import "./mostrarMoeda.css";
+@import "./conversorMoeda.css";
+@import "./conversorBTC.css";
 
 *{
   padding: 0;

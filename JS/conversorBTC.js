@@ -25,11 +25,11 @@ function estilizandoValores(dadosArray){
     createOption.innerHTML = moedaSimbolo
     todosValores.appendChild(createOption)
 
-    convertendoValores(dadosArray, createOption)
+    convertendoValores(dadosArray)
   })
 }
 
-function convertendoValores(dadosArray, createOption){
+function convertendoValores(dadosArray){
   let valorSelecionado = todosValores.options[todosValores.selectedIndex].value
   dadosArray.forEach((item, index)=>{
     let calculoConversao  = Number(inputValor.value / dadosArray[index][1].sell).toFixed(9)

@@ -12,6 +12,7 @@
 
 
   function fetchValueMostrarMoeda(){
+
     fetch('https://blockchain.info/ticker')
     .then(response=>{
       let responseJson = response.json()
@@ -42,15 +43,18 @@
         painelMoedaBox.appendChild(createMoeda)
         createMoeda.appendChild(createTitulo)
         createMoeda.appendChild(createValor)
-
-        createTitulo.innerHTML = arrayCurrencys[index][0]
-        createValor.innerHTML = arrayCurrencys[index][1].sell
-
+  
         createMoeda.style.left = index * 33 + '%'
         windowMatchMedia.matches ? createMoeda.style.left = index * 100 + '%' : createMoeda.style.left = index * 33 + '%'
 
         return
       }
+
+      let allTitles = document.querySelectorAll('.title')
+      let allValues = document.querySelectorAll('.value')
+
+      allTitles.forEach((item, index) => {item.innerHTML = arrayCurrencys[index][0]})
+      allValues.forEach((item, index) => {item.innerHTML = arrayCurrencys[index][1].sell})
     })
 
     verificadorShowMoeda = true
@@ -81,6 +85,7 @@
     console.log(counterSlide)
   }
 
+  console.log(fetchValueMostrarMoeda())
   fetchValueMostrarMoeda()
   setInterval(fetchValueMostrarMoeda, 5000)
   proximo.addEventListener('click',()=>{next()})

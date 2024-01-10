@@ -85,9 +85,8 @@
     console.log(counterSlide)
   }
 
-  console.log(fetchValueMostrarMoeda())
   fetchValueMostrarMoeda()
-  setInterval(fetchValueMostrarMoeda, 5000)
+  setInterval(fetchValueMostrarMoeda, 800)
   proximo.addEventListener('click',()=>{next()})
   anterior.addEventListener('click', ()=>{previous()})
 

@@ -27,7 +27,7 @@ function converterHandler(BTC){
   } else {
     BTC.forEach((item, index)=>{
       let calculo = Number(BTCvalue * BTC[index][1].sell).toFixed(0)
-      if((verificador === false )){
+      if((verificadorConversor === false )){
         let createElement = document.createElement('div')
         let title = document.createElement('p')
         let value = document.createElement('p')

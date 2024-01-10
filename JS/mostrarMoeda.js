@@ -30,7 +30,7 @@
 
   function estilizando(arrayCurrencys){
     arrayCurrencys.forEach((item, index)=>{
-      if(verificador === false){
+      if(verificadorShowMoeda === false){
         let createMoeda = document.createElement('div')
         let createTitulo = document.createElement('p')
         let createValor = document.createElement('p')

@@ -24,34 +24,37 @@ function converterHandler(BTC){
   if(BTCvalue === '' || BTCvalue === '0'){
     alert('Preencha corretamente')
     conversorInput.value = ''
-  } else {
-    BTC.forEach((item, index)=>{
-      let calculo = Number(BTCvalue * BTC[index][1].sell).toFixed(0)
-      if((verificadorConversor === false )){
-        let createElement = document.createElement('div')
-        let title = document.createElement('p')
-        let value = document.createElement('p')
+    return
+  } 
 
-        createElement.classList.add('moedaBTC-conversor', 'showOn', 'convertido')
-        title.classList.add('title-conversor')
-        value.classList.add('value-conversor')
+  BTC.forEach((item, index)=>{
+    let calculo = Number(BTCvalue * BTC[index][1].sell).toFixed(0)
+    if((verificadorConversor === false )){
+      let createElement = document.createElement('div')
+      let title = document.createElement('p')
+      let value = document.createElement('p')
 
-        painelConvesor.appendChild(createElement)
-        createElement.appendChild(title)
-        createElement.appendChild(value)
+      createElement.classList.add('moedaBTC-conversor', 'showOn', 'convertido')
+      title.classList.add('title-conversor')
+      value.classList.add('value-conversor')
 
-        value.innerHTML = calculo 
-        title.innerHTML = BTC[index][0]
-      } else {
-        let novoValor = document.querySelectorAll('.value-conversor')
-        novoValor.forEach((item, index)=>{
-          let novoCalculo = Number(BTCvalue * BTC[index][1].sell).toFixed(0)
-          item.innerHTML = novoCalculo
-        })
-      }
-    })
-    verificadorConversor = true
-  }
+      painelConvesor.appendChild(createElement)
+      createElement.appendChild(title)
+      createElement.appendChild(value)
+
+      value.innerHTML = calculo 
+      title.innerHTML = BTC[index][0]
+      return 
+    } 
+        
+    let novoValor = document.querySelectorAll('.value-conversor')
+    novoValor.forEach((item, index)=>{
+      let novoCalculo = Number(BTCvalue * BTC[index][1].sell).toFixed(0)
+      item.innerHTML = novoCalculo
+    })  
+  })
+  
+  verificadorConversor = true
 }
 
 

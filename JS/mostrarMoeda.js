@@ -10,9 +10,7 @@
   let verificadorShowMoeda = false
   
 
-
   function fetchValueMostrarMoeda(){
-
     fetch('https://blockchain.info/ticker')
     .then(response=>{
       let responseJson = response.json()
@@ -46,7 +44,6 @@
   
         createMoeda.style.left = index * 33 + '%'
         windowMatchMedia.matches ? createMoeda.style.left = index * 100 + '%' : createMoeda.style.left = index * 33 + '%'
-
         return
       }
 

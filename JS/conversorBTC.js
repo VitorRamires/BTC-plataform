@@ -35,6 +35,7 @@ function convertendoValores(dadosArray){
     let calculoConversao  = Number(inputValor.value / dadosArray[index][1].sell).toFixed(9)
     if(valorSelecionado === item[0]){
       respostaBTC.innerHTML = calculoConversao
+      return
     }
   })
 }

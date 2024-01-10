@@ -1,7 +1,7 @@
 const painelConvesor = document.querySelector('.conversor-painel')
 const BtnConversor = document.querySelector('.botao-converter')
 const conversorInput = document.querySelector('#input-btc')
-let verificador = false
+let verificadorConversor = false
 
 function fetchBTCconversorMoeda(){
   fetch('https://blockchain.info/ticker')
@@ -50,7 +50,7 @@ function converterHandler(BTC){
         })
       }
     })
-    verificador = true
+    verificadorConversor = true
   }
 }
 

@@ -7,6 +7,7 @@
   const painelMoedaBox = document.querySelector('.painel-moedas-box')
   let counterSlide = 0
   let windowMatchMedia = window.matchMedia("(max-width:680px)")
+  let verificadorShowMoeda = false
   
 
 
@@ -26,7 +27,7 @@
     })
   }
 
-  
+
   function estilizando(arrayCurrencys){
     arrayCurrencys.forEach((item, index)=>{
       if(verificador === false){
@@ -52,7 +53,7 @@
       }
     })
 
-    verificador = true
+    verificadorShowMoeda = true
   }
   
 

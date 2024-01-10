@@ -83,7 +83,7 @@
   }
 
   fetchValueMostrarMoeda()
-  setInterval(fetchValueMostrarMoeda, 800)
+  setInterval(fetchValueMostrarMoeda, 500)
   proximo.addEventListener('click',()=>{next()})
   anterior.addEventListener('click', ()=>{previous()})
 

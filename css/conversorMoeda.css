@@ -131,6 +131,14 @@
   }
 }
 
+
+@media screen and (max-width:1551px) {
+  .input-body{
+    border-radius: 0;
+  }
+}
+
+
 @media screen and (max-width:680px) {
   .moedaBtc-conversor{
     font-family: inria-regular;

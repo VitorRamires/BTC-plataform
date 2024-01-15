@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
 </head>
 <body>
@@ -23,53 +23,52 @@
       <img src="./icons/arrow-right-short.svg" alt="">
     </div>
   </section>
-
-  <section class="BTC-para-moeda">
-    <div class="input-body">
-      <div class="titulo-input">
-        <h3>Digite o valor e BTC</h3>
-      </div>
-      <div class="input-box">
-        <label for="input-btc"></label>
-        <input type="number" id="input-btc" placeholder="Digite qualquer valor">
-      </div>
-    </div>
-    <div class="botao-converter">
-      <img src="./icons/arrow-right-converter.svg" alt="">
-    </div>
-    <div class="conversor-painel"></div>
-  </section>
-
-  <section class="moeda-para-BTC">
-    <div class="title-conversor-MoedaBTC">
-      <h3>Coversor para BTC</h3>
-    </div>
-    <div class="conversor-moeda-BTC">
-      <div class="moeda-informacoes">
-        <div class="valor-moeda">
-          <h3>Valor</h3>
-          <label for="moedaValor"></label>
-          <input type="number" id="moedaValor">
+  <section class="conversores">
+    <div class="btc-para-moeda">
+      <div class="input-body">
+        <div class="titulo-input">
+          <h3>Digite o valor e BTC</h3>
         </div>
-        <div class="seleciodar-moeda-box">
-          <div class="selecionar-moeda">
-            <select name="moedasDisponiveis" id="moedasDisponiveis"></select>
+        <div class="input-box">
+          <label for="input-btc"></label>
+          <input type="number" id="input-btc" placeholder="Digite qualquer valor">
+        </div>
+        <div class="botao-converter">
+          <img src="./icons/arrow-right-converter.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="moeda-para-btc">
+      <div class="title-conversor-MoedaBtc">
+        <h3>Coversor para BTC</h3>
+      </div>
+      <div class="conversor-moeda-btc">
+        <div class="moeda-informacoes">
+          <div class="valor-moeda">
+            <h3>Valor</h3>
+            <label for="moedaValor"></label>
+            <input type="number" id="moedaValor">
+          </div>
+          <div class="seleciodar-moeda-box">
+            <div class="selecionar-moeda">
+              <select name="moedasDisponiveis" id="moedasDisponiveis"></select>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="botao-converterMoeda">
-        <img src="./icons/arrow-right-converter.svg" alt="">
-      </div>
-      <div class="resposta-BTC-box">
-        <p>BTC</p>
-        <p class="resposta-BTC"></p>
+        <div class="botao-converterMoeda">
+          <img src="./icons/arrow-right-converter.svg" alt="">
+        </div>
+        <div class="resposta-btc-box">
+          <p>BTC</p>
+          <p class="resposta-btc"></p>
+        </div>
       </div>
     </div>
   </section>
+  <div class="conversor-painel" id="conversor-painel"></div>
 </main>
 
-<script src="JS/mostrarMoeda.js"></script>
-<script src="JS/conversorMoeda.js"></script>
-<script src="JS/conversorBTC.js"></script>
+<script type="module" src="./js/script.js"></script>
 </body>
 </html>
+

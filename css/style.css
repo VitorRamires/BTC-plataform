@@ -1,0 +1,50 @@
+@import "/css/mostrarMoeda.css";
+@import "/css/conversorMoeda.css";
+@import "/css/conversorBTC.css";
+
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+  font-family: inria-bold;
+}
+
+
+@font-face {
+  font-family: inria-bold;
+  src: url(/fonts/InriaSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: inria-light;
+  src: url(fonts/InriaSans-Light.ttf);
+}
+
+@font-face {
+  font-family: inria-regular;
+  src: url( /fonts/InriaSans-Regular.ttf);
+}
+
+
+.conversores{
+  display: flex;
+  justify-content: center;
+  align-items: start; 
+  flex-wrap: wrap;
+  margin:100px auto 50px auto;
+  gap: 20px;
+  width: 1700px;
+  max-width: 100%;
+}
+
+@media screen and (max-width:1637px) {
+  .conversores{
+    gap: 0;
+  } 
+}
+
+@media screen and (max-width:815px) {
+  .input-body, .moeda-para-BTC, .conversor-moeda-BTC{
+    border-radius: 0;
+  }
+}

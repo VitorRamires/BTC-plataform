@@ -18,3 +18,8 @@ HTML5 - Linguagem de Marcação do projeto
 
 Vitor Martins Ramires - Responsavel pelo projeto e documentação
 Tiago Ortiz - Responsavel pelo feedback (melhorias)
+
+
+🎁 Expressões de gratidão
+
+Um agradecimento especial para Tiago Ortiz, que me ajudou a melhorar o código, e apontar melhorias que poderiam ser feitas.

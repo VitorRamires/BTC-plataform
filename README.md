@@ -1,7 +1,8 @@
 # Btc-plataform
 
 Webpage que possue 3 principais funcionalidades: Mostrar as moedas em valores BTC, converter o valor de BTC para moeda, e converter valor de uma moeda escolhida para BTC.
-O projeto utiliza as três principais tecnologias front-end: Javascript, CSS3 e HTML5.
+O projeto utiliza as três principais tecnologias front-end: Javascript, CSS3 e HTML5. 
+O projeto foi desenvolvido usando a API da blockchain, e mostra os valores em tempo real.
 
 🚀 Começando
 

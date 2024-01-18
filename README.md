@@ -11,13 +11,17 @@ Basta baixar o arquivo através do repositório do github e abrir o index.html a
 🛠️ Construído com
 
 Javascript - Linguagem de programação utilizado
+
 CSS3 - Estilização da projeto
+
 HTML5 - Linguagem de Marcação do projeto
+
 
 
 ✒️ Autores
 
 Vitor Martins Ramires - Responsavel pelo projeto e documentação
+
 Tiago Ortiz - Responsavel pelo feedback (melhorias)
 
 

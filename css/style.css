@@ -9,6 +9,9 @@
   font-family: inria-bold;
 }
 
+body{
+  background: linear-gradient(180deg, #3E3E3E, #000000, #3E3E3E);
+}
 
 @font-face {
   font-family: inria-bold;
@@ -23,6 +26,31 @@
 @font-face {
   font-family: inria-regular;
   src: url( /fonts/InriaSans-Regular.ttf);
+}
+
+
+.titulo-section{
+  text-align: center;
+  margin:50px auto 150px auto;
+  width: 100%;
+}
+
+.titulo-decoracao{
+  position: relative;
+  margin:0 auto;
+  width: 400px;
+  height: 300px;
+  background-color: #474747;
+}
+
+.titulo-section h2{
+  position: absolute;
+  font-size:7rem;
+  top:50%;
+  left:50%;
+  transform: translate(-30%, -50%);
+  color: #FF7A00;
+  font-family: inria-bold;
 }
 
 

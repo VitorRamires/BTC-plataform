@@ -44,8 +44,8 @@
           createMoeda.appendChild(createTitulo)
           createMoeda.appendChild(createValor)
     
-          createMoeda.style.left = index * 33 + '%'
-          windowMatchMedia.matches ? createMoeda.style.left = index * 100 + '%' : createMoeda.style.left = index * 33 + '%'
+          createMoeda.style.left = index * 25 + '%'
+          windowMatchMedia.matches ? createMoeda.style.left = index * 100 + '%' : createMoeda.style.left = index * 25 + '%'
           return
         }
 

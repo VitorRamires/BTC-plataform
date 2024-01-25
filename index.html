@@ -15,11 +15,11 @@
   </section>
 
   <section class="painel-moedas">
-    <div class="titulo-mostrar-moedas">
+    <div class="titulo-box">
       <img src="/icons/Bitcoin.svg" alt="bitcoin icon" class="bitcoin">
-      <div class="box-titulo-mostrar-moedas">
+      <div class="box-titulo-box">
         <h3>Cotação Bitcoin</h3>
-        <p>Mostrando cotação do bitcoin em tempo real</p>
+        <p>Mostrando cotação do <spam class="destacar">bitcoin</spam> em tempo real</p>
       </div>
     </div>
     <div class="mostrar-moedas">
@@ -36,6 +36,7 @@
   </section>
 
   <section class="conversores">
+
     <div class="btc-para-moeda">
       <div class="input-body">
         <div class="titulo-input">
@@ -49,10 +50,16 @@
           <img src="./icons/arrow-right-converter.svg" alt="">
         </div>
       </div>
+      <div class="conversor-painel" id="conversor-painel"></div>
     </div>
+
     <div class="moeda-para-btc">
-      <div class="title-conversor-MoedaBtc">
-        <h3>Coversor para BTC</h3>
+      <div class="titulo-box">
+        <img src="/icons//para-moeda.svg" alt="bitcoin icon" class="bitcoin">
+        <div class="box-titulo-box">
+          <h3>Para Moeda</h3>
+          <p>Converte moeda para <spam class="destacar">bitcoin</spam></p>
+        </div>
       </div>
       <div class="conversor-moeda-btc">
         <div class="moeda-informacoes">
@@ -61,7 +68,7 @@
             <label for="moedaValor"></label>
             <input type="number" id="moedaValor">
           </div>
-          <div class="seleciodar-moeda-box">
+          <div class="selecionar-moeda-box">
             <div class="selecionar-moeda">
               <select name="moedasDisponiveis" id="moedasDisponiveis"></select>
             </div>
@@ -71,13 +78,12 @@
           <img src="./icons/arrow-right-converter.svg" alt="">
         </div>
         <div class="resposta-btc-box">
-          <p>BTC</p>
           <p class="resposta-btc"></p>
         </div>
       </div>
     </div>
+
   </section>
-  <div class="conversor-painel" id="conversor-painel"></div>
 </main>
 
 <script type="module" src="./js/script.js"></script>

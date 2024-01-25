@@ -37,7 +37,7 @@ export default function conversorMoedaParaBtc(){
         let value = document.createElement('p')
 
         createElement.classList.add('moedaBtc-conversor', 'showOn', 'convertido')
-        painelConvesor.classList.add('growWidth')
+        painelConvesor.classList.add('growHeigth')
         title.classList.add('title-conversor')
         value.classList.add('value-conversor')
 
@@ -66,7 +66,7 @@ export default function conversorMoedaParaBtc(){
         top:document.body.scrollHeight,
         behavior:"smooth"
       })
-    }, 100)
+    }, 500)
   }
 
   BtnConversor.addEventListener('click', scroll)

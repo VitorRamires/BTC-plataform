@@ -67,7 +67,7 @@
         if(windowMatchMedia.matches){
           counterSlide > 27 ? counterSlide = 27 : barraProgresso.style.width = counterSlide * 3.7 + '%'
         } else {
-          counterSlide > 25 ? counterSlide = 25 : barraProgresso.style.width = counterSlide * 4 + '%'
+          counterSlide > 24 ? counterSlide = 24 : barraProgresso.style.width = counterSlide * 4.3 + '%'
         }
       })
     }

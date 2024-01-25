@@ -107,8 +107,58 @@ body{
 
 
 
-@media screen and (max-width:815px) {
-  .input-body, .moeda-para-BTC, .conversor-moeda-BTC{
-    border-radius: 0;
+@media screen and (max-width:900px) {
+  .titulo-decoracao{
+    width: 200px;
+    height: 200px;
+  }
+
+  .titulo-section h2{
+    font-size: 4.5rem;
+    transform: translate(-50%, -50%)
+  }
+}
+
+@media screen and (max-width:730px) {
+  .titulo-box h3{
+    font-size: 2.5rem;
+  }
+  .titulo-box p{
+    font-size: 0.8rem;
+  }
+  .titulo-box{
+    gap: 30px;
+  }
+
+  .titulo-box img{
+    width: 120px;
+    height: 120px;
+  }
+}
+@media screen and (max-width:530px) {
+
+  .titulo-box{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .box-titulo-box{
+    align-items: center;
+    text-align: center;
+  }
+
+  .titulo-box h3{
+    font-size: 2rem;
+  }
+  .titulo-box p{
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width:365px) {
+  .titulo-section h2{
+    font-size: 3.5rem;
+    transform: translate(-50%, -50%)
   }
 }

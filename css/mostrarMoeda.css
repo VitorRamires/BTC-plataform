@@ -106,28 +106,35 @@
   transform: rotate(-180deg);
 }
 
-@media screen and (max-width:365px) {
-  .botao{
-    padding: 0;
-  }
-  .moeda .value{
-    font-size: 1.2rem;
-  }
 
-  .titulo-section{
-    flex-direction: column-reverse;
+@media screen and (max-width:730px) {
+  .painel-moedas{
+    height: 350px;
   }
 }
+
 
 @media screen and (max-width:680px) {
   .moeda{
     width: 100%;
   }
-  .titulo-section img{
-    width: 100px;
-    height: 100px;
+}
+
+@media screen and (max-width:530px) {
+  .painel-moedas{
+    height: 450px;
   }
-  .titulo-section{
-    font-size:2.5rem;
+
+  .botao{
+    padding: 0;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .moeda .value {
+    font-size: 1rem;
+  }
+  .moeda .title {
+    font-size: 1.8rem;
   }
 }

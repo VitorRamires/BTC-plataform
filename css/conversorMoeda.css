@@ -11,14 +11,18 @@ position: relative;
   background-color: #434343;
   text-align: center;
   display: flex;
-  align-items: end;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding:70px 30px;
   border-bottom: 10px solid #FF7A00;
+  gap: 50px;
 }
 
 .input-info{
   position: relative;
+  width: 600px;
+  max-width: 100%;
 }
 
 .titulo-input{
@@ -27,13 +31,12 @@ position: relative;
   color:#ffffff;
   font-family: inter-regular;
   margin-bottom: 30px;
-  text-align: start;
+  text-align: center;
 }
 
 .input-box{
   position: relative;
-  width: 550px;
-  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
   height: 70px;
 }
@@ -91,7 +94,6 @@ position: relative;
 .botao-converter img{
   transform: scale(1);
   width: 130px;
-  margin-right: 100px;
 }
 
 

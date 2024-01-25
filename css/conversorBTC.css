@@ -8,6 +8,7 @@
 }
 
 
+
 .moeda-para-btc::after{
   content: "";
   position: absolute;
@@ -78,6 +79,7 @@
   padding:10px;
   font-size: 1.5rem;
   border-top:5px solid #FF7A00;
+  text-align: center;
 }
 
 
@@ -119,7 +121,7 @@ select{
   position: relative;
   z-index: 5;
   padding: 7px;
-  background-color: rgb(73, 73, 73);
+  background-color: rgb(180, 180, 180);
   transition: 0.2s;
 }
 

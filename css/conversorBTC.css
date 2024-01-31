@@ -155,7 +155,8 @@ select{
   }
 
   .resposta-btc-box{
-    padding: 35px;
+    padding: 25px;
+    text-align: center;
   }  
 }
 

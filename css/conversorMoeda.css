@@ -54,8 +54,8 @@ position: relative;
 
 .conversor-painel{
   opacity: 0;
+  display: none;
   position: relative;
-  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   background-color: #ffffff;
   width: 90%;
@@ -65,8 +65,7 @@ position: relative;
   overflow-x: hidden;
   place-items: center start;
   transition: 0.3s;
-  margin:0 auto;
-
+  margin: 0 auto;
 }
 
 
@@ -128,6 +127,7 @@ position: relative;
 
 .growHeigth{
   opacity: 1;
+  display: grid !important;
   padding:25px;
   transition: 0.3s;
 }
@@ -136,10 +136,12 @@ position: relative;
   from{
     transform: translateY(-75px);
     opacity: 0;
+    display: none;
   }
   to{
     transform: translateY(0);
     opacity: 1;
+    display: grid !important;
   }
 }
 

@@ -13,10 +13,39 @@ body{
   background: linear-gradient(180deg, #272727, #272727, #000000, #000000, #272727);
 }
 
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #272727 50%, #000000 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: .5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 8s;
+}
+
+.bg3 {
+  animation-duration: 9s;
+}
 .destacar{
   color: #ff9a3c;
 }
 
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(25%);
+  }
+}
 @font-face {
   font-family: inter-bold;
     src: url(/fonts/inter-Bold.ttf);

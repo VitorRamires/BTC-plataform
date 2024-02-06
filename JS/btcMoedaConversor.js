@@ -37,16 +37,13 @@ export default function conversorBtcParaMoeda(){
       let calculoConversao  = Number(inputValor.value / dadosArray[index][1].sell).toFixed(9)
       if(valorSelecionado === item[0]){
         respostaBTC.innerHTML = `${calculoConversao} Bitcoin`
-        return
       }
     })
   }
 
 
-  
 
   fetchMoedaConversorBTC()
-  
   converterBTN.addEventListener('click', scroll)
   converterBTN.addEventListener('click', fetchMoedaConversorBTC)
 

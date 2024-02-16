@@ -2,9 +2,6 @@
 
     const anterior = document.querySelector('.anterior')
     const proximo = document.querySelector('.proximo')
-    const moedaTitle = Array.from(document.querySelectorAll('.title'))
-    const moedaValue = Array.from(document.querySelectorAll('.value'))
-    const moeda = Array.from(document.querySelectorAll('.moeda'))
     const barraProgresso = document.querySelector('.progresso')
     const painelMoedaBox = document.querySelector('.painel-moedas-box')
     let counterSlide = 0
@@ -88,6 +85,4 @@
     setInterval(fetchValueMostrarMoeda, 500)
     proximo.addEventListener('click',()=>{next()})
     anterior.addEventListener('click', ()=>{previous()})
-
-
 }

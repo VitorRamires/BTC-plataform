@@ -61,5 +61,4 @@ export default function conversorMoedaParaBtc(){
 
   BtnConversor.addEventListener('click', scroll)
   BtnConversor.addEventListener('click',  fetchBTCconversorMoeda)
-
 }

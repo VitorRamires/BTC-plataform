@@ -1,0 +1,193 @@
+@import "/css/mostrarMoeda.css";
+@import "/css/conversorMoeda.css";
+@import "/css/conversorBTC.css";
+
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+  font-family: inter-regular;
+}
+
+body{
+  background: linear-gradient(180deg, #272727, #272727, #000000, #000000, #272727);
+}
+
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #272727 50%, #1f1f1f 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: .5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 8s;
+}
+
+.bg3 {
+  animation-duration: 9s;
+}
+.destacar{
+  color: #ff9a3c;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(25%);
+  }
+}
+@font-face {
+  font-family: inter-bold;
+    src: url(/fonts/inter-Bold.ttf);
+}
+
+@font-face {
+  font-family: inter-light;
+    src: url(fonts/inter-Light.ttf);
+}
+
+@font-face {
+  font-family: inter-regular;
+  src: url(/fonts/inter-Regular.ttf);
+}
+
+
+.titulo-section{
+  text-align: center;
+  margin:50px auto 150px auto;
+  width: 100%;
+}
+
+.titulo-decoracao{
+  position: relative;
+  margin:0 auto;
+  width: 400px;
+  height: 300px;
+  background-color: #474747;
+}
+
+.titulo-section h2{
+  position: absolute;
+  font-size:7rem;
+  top:50%;
+  left:50%;
+  transform: translate(-30%, -50%);
+  color: #FF7A00;
+  font-family: inter-bold;
+}
+
+
+
+.titulo-box{
+  position: relative;
+  width: 100%;
+  color:#ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 60px;
+  padding:30px;
+  background-color: #373737;
+  z-index: 4;
+}
+
+.box-titulo-box{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.box-titulo-box h3{
+  font-size: 3.5rem;
+  font-family: inter-regular;
+}
+
+.box-titulo-box p{
+  font-size: 1rem;
+  font-family: inter-regular;
+  color: #979797;
+  margin: 10px 0 0 5px;
+  
+}
+
+.conversores{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  margin:100px auto 50px auto;
+  gap: 70px;
+  width: 1000px;
+  max-width: 100%;
+}
+
+
+
+@media screen and (max-width:900px) {
+  .titulo-decoracao{
+    width: 200px;
+    height: 200px;
+  }
+
+  .titulo-section h2{
+    font-size: 4.5rem;
+    transform: translate(-50%, -50%)
+  }
+}
+
+@media screen and (max-width:730px) {
+  .titulo-box h3{
+    font-size: 2.5rem;
+  }
+  .titulo-box p{
+    font-size: 0.8rem;
+  }
+  .titulo-box{
+    gap: 30px;
+  }
+
+  .titulo-box img{
+    width: 120px;
+    height: 120px;
+  }
+}
+@media screen and (max-width:530px) {
+
+  .titulo-box{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .box-titulo-box{
+    align-items: center;
+    text-align: center;
+  }
+
+  .titulo-box h3{
+    font-size: 2rem;
+  }
+  .titulo-box p{
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width:365px) {
+  .titulo-section h2{
+    font-size: 3.5rem;
+    transform: translate(-50%, -50%)
+  }
+}

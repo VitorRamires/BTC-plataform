@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="bg bg2"></div>
+  <div class="bg bg3"></div>
+<main>
+  <section class="titulo-section">
+    <div class="titulo-decoracao">
+      <h2>Bitverter</h2>
+    </div>
+  </section>
+
+  <section class="painel-moedas">
+    <div class="titulo-box">
+      <img src="/icons/Bitcoin.svg" alt="bitcoin icon" class="bitcoin">
+      <div class="box-titulo-box">
+        <h3>Cotação Bitcoin</h3>
+        <p>Mostrando cotação do <spam class="destacar">bitcoin</spam> em tempo real</p>
+      </div>
+    </div>
+    <div class="mostrar-moedas">
+      <div class="proximo botao">
+        <img src="./icons/arrow-right-short.svg" alt="">
+      </div>
+      <div class="painel-moedas-box">
+        <div class="progresso"></div>
+      </div>
+      <div class="anterior botao">
+        <img src="./icons/arrow-right-short.svg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="conversores">
+
+    <div class="btc-para-moeda">
+      <div class="titulo-box">
+        <img src="/icons/teste.svg" alt="bitcoin icon" class="bitcoin">
+        <div class="box-titulo-box">
+          <h3>Para Moeda</h3>
+          <p>Converte <spam class="destacar">bitcoin</spam> para moeda</p>
+        </div>
+      </div>
+      <div class="input-body">
+        <div class="input-info">
+          <div class="titulo-input">
+            <h3>Valor em BTC</h3>
+          </div>
+          <div class="input-box">
+            <label for="input-btc"></label>
+            <input type="number" id="input-btc" placeholder="Digite qualquer valor">
+          </div>
+        </div>
+        <div class="botao-converter">
+          <img src="./icons/arrow-right-converter.svg" alt="">
+        </div>
+      </div>
+      <div class="conversor-painel" id="conversor-painel"></div>
+    </div>
+
+    <div class="moeda-para-btc">
+      <div class="titulo-box">
+        <img src="/icons/para-moeda.svg" alt="bitcoin icon" class="bitcoin">
+        <div class="box-titulo-box">
+          <h3>Para Bitcoin</h3>
+          <p>Converte moeda para <spam class="destacar">bitcoin</spam></p>
+        </div>
+      </div>
+      <div class="conversor-moeda-btc">
+        <div class="moeda-informacoes">
+          <div class="valor-moeda">
+            <h3>Valor</h3>
+            <label for="moedaValor"></label>
+            <input type="number" id="moedaValor">
+          </div>
+          <div class="selecionar-moeda-box">
+            <div class="selecionar-moeda">
+              <select name="moedasDisponiveis" id="moedasDisponiveis"></select>
+            </div>
+          </div>
+        </div>
+        <div class="botao-converterMoeda">
+          <img src="./icons/arrow-right-converter.svg" alt="">
+        </div>
+        <div class="resposta-btc-box">
+          <p class="resposta-btc"></p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<script type="module" src="./js/script.js"></script>
+</body>
+</html>
+

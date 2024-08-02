@@ -1,0 +1,167 @@
+.moeda-para-btc{
+  position: relative;
+  width: 1000px;
+  max-width: 100%;
+  margin:0 auto;
+  background: linear-gradient(-180deg, #545454, #00000088);
+  margin-top:100px;
+}
+
+
+
+.moeda-para-btc::after{
+  content: "";
+  position: absolute;
+  top:0;
+  left:50%;
+  transform: translate(-50%, -100%);
+  width: 70%;
+  height: 50px;
+  background-color: #202020;
+}
+
+.title-conversor-MoedaBtc{
+  text-align: center;
+  color:#ffffff;
+  font-family: inter-bold;
+  font-size: 1.5rem;
+}
+
+.conversor-moeda-btc{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  place-items: center center;
+  gap: 50px;
+  padding: 50px 0;
+}
+
+
+.botao-converterMoeda img{
+  transform:scale(1);
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: 0.25s;
+  box-shadow: 0 7px 7px 0 #0000006e;
+}
+
+.botao-converterMoeda{
+  cursor: pointer;
+}
+
+.botao-converterMoeda img:hover{
+  transform: scale(1.1);
+}
+
+
+.moeda-informacoes{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 30px;
+  height: 200px;
+}
+
+
+.valor-moeda h3{
+  color: #ffffff;
+}
+
+#moedaValor{
+  height: 80px;
+  width: 100%;
+  border:none;
+  outline: none;
+  background-color: #ececec;
+  margin-top:10px;
+  padding:10px;
+  font-size: 1.5rem;
+  border-top:5px solid #FF7A00;
+  text-align: center;
+}
+
+
+
+.selecionar-moeda-box{
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+
+.resposta-btc-box{
+  position: relative;
+  font-family: inter-bold;
+  font-size: 1.5rem;
+  color: #FF7A00;;
+}
+
+
+select{
+  width: 100%;
+  position: relative;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #222222;
+  font-family: inter-bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+  -moz-appearance: none;
+  -webkit-appearance: none; 
+  appearance: none;
+  text-align: center;
+  
+}
+
+
+.selecionar-moeda{
+  position: relative;
+  z-index: 5;
+  padding: 7px;
+  background-color: rgb(180, 180, 180);
+  transition: 0.2s;
+}
+
+.selecionar-moeda:hover{
+  background-color:#FF7A00;
+  transition: 0.2s;
+}
+
+
+.valor-moeda h3, .selecionar-moeda h3{
+  font-family: inter-bold;
+  font-size: 1.5rem;
+}
+
+
+
+@media screen and (max-width:885px) {
+  .conversor-moeda-btc{
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 15px 0 15px;
+  }
+
+  .botao-converterMoeda img{
+    transform:scale(1) rotate(-90deg);
+    box-shadow: none;
+  }
+
+  .botao-converterMoeda img:hover{
+    transform:scale(1) rotate(90deg);
+  }
+
+  .resposta-btc-box{
+    padding: 25px;
+    text-align: center;
+  }  
+}
+
+@media screen and (max-width:530px) {
+  .moeda-informacoes {
+    padding: 15px;
+  }
+}

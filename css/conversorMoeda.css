@@ -1,0 +1,166 @@
+
+.btc-para-moeda{
+ width: 100%;
+ margin-top:50px;
+position: relative;
+}
+
+.input-body{
+  position: relative;
+  max-width: 100%;
+  background-color: #434343ad;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding:70px 30px;
+  border-bottom: 10px solid #FF7A00;
+  gap: 50px;
+}
+
+.input-info{
+  position: relative;
+  width: 600px;
+  max-width: 100%;
+}
+
+.titulo-input{
+  position: relative;
+  font-size: 1.4rem;
+  color:#ffffff;
+  font-family: inter-regular;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.input-box{
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  height: 70px;
+}
+
+.input-box input{ 
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.conversor-painel{
+  opacity: 0;
+  display: none;
+  position: relative;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  background-color: #ffffff;
+  width: 90%;
+  height: 540px;
+  box-shadow: 0 20px 10px 0 #00000059;
+  gap: 10px;
+  overflow-x: hidden;
+  place-items: center start;
+  transition: 0.3s;
+  margin: 0 auto;
+}
+
+
+.moedaBtc-conversor{
+  width: 100%;
+  font-family: inter-regular;
+  font-size: 1.2rem;
+  text-align: start;
+  letter-spacing: 0.1rem;
+  transition: 0.2s;
+  padding:10px;
+  background-color: #f0f0f0;
+  text-align: center;
+  overflow-x: hidden;
+  margin: 24px 0;
+}
+
+.botao-converter{
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  margin-top:15px;
+}
+
+.botao-converter img{
+  transform: scale(1);
+  width: 70px;
+}
+
+
+.title-conversor{
+  color:#c98600;
+  font-family: inter-bold;
+}
+
+.value-conversor{
+  color:#494949;
+  font-size: 1rem;
+  margin-top:5px;
+}
+
+
+.botao-converter img{
+  transform: rotate(90deg) scale(1);
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: 0.25s;
+}
+
+.botao-converter img:hover{
+  transform: rotate(90deg) scale(1.1);
+  transition: 0.25s;
+}
+
+.showOn{
+  animation: anim-showOn 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.growHeigth{
+  opacity: 1;
+  display: grid !important;
+  padding:25px;
+  transition: 0.3s;
+}
+
+@keyframes anim-showOn {
+  from{
+    transform: translateY(-75px);
+    opacity: 0;
+    display: none;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+    display: grid !important;
+  }
+}
+
+
+@media screen and (max-width:1551px) {
+  .input-body{
+    border-radius: 0;
+  }
+}
+
+
+@media screen and (max-width:680px) {
+  .moedaBtc-conversor{
+    font-family: inter-regular;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .moedaBtc-conversor{
+    font-size: 1rem;
+  }
+}

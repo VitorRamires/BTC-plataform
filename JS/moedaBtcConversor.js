@@ -56,7 +56,7 @@ export default function conversorMoedaParaBtc(){
         top:document.body.scrollHeight,
         behavior:"smooth"
       })
-    }, 50)
+    }, 30)
   }
 
   BtnConversor.addEventListener('click', scroll)

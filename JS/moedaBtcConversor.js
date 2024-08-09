@@ -34,8 +34,8 @@ export default function conversorMoedaParaBtc(){
 
         painelConvesor.appendChild(createElement)
 
-       handleReturn.createParagraph[0].innerText = calculo
-       handleReturn.createParagraph[1].innerText = BTC[index][0]
+       handleReturn.createParagraph[0].innerText = BTC[index][0]
+       handleReturn.createParagraph[1].innerText = calculo 
        
       return 
       } 
@@ -43,6 +43,7 @@ export default function conversorMoedaParaBtc(){
       let novoValor = document.querySelectorAll('.value-conversor')
       novoValor.forEach((item, index)=>{
         let novoCalculo = Number(BTCvalue * BTC[index][1].sell).toFixed(0)
+        console.log(item)
         item.innerHTML = novoCalculo
       })  
     })

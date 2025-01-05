@@ -65,7 +65,7 @@ body{
 
 .titulo-section{
   text-align: center;
-  margin:50px auto 150px auto;
+  margin:30px auto 150px auto;
   width: 100%;
 }
 
@@ -130,8 +130,8 @@ body{
   flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
-  margin:100px auto 50px auto;
-  gap: 70px;
+  margin:50px auto 50px auto;
+  gap: 30px;
   width: 1000px;
   max-width: 100%;
 }

@@ -15,7 +15,7 @@ position: relative;
   justify-content: center;
   padding:70px 30px;
   border-bottom: 10px solid #FF7A00;
-  gap: 50px;
+  gap: 30px;
 }
 
 .input-info{
@@ -86,7 +86,6 @@ position: relative;
   position: relative;
   text-align: center;
   cursor: pointer;
-  margin-top:15px;
 }
 
 .botao-converter img{

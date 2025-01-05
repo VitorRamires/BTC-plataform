@@ -61,7 +61,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 1%;
+  width: 0;
   height: 7px;
   background-color: #ffa800;
   transition: 0.2s;

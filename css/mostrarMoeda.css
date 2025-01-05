@@ -1,4 +1,4 @@
-.painel-moedas{
+.painel-moedas {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -10,24 +10,12 @@
   z-index: 2;
 }
 
-.painel-moedas::before{
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top:50%;
-  left:0;
-  transform: translate(-15%, -50%);
-  width: 300px;
-  height: 500px;
-  background-color: #1f1f1f;
-  box-shadow:-5px 5px 4px 0 #00000036;
-}
 
 
-.mostrar-moedas{
+.mostrar-moedas {
   position: relative;
   width: 100%;
-  height: 100%;  
+  height: 100%;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -35,13 +23,11 @@
   z-index: 3;
 }
 
-
-
-.moeda{
+.moeda {
   width: 25%;
   height: 100%;
   position: absolute;
-  top:0;
+  top: 0;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -49,43 +35,43 @@
   align-items: center;
   gap: 3px;
   background-color: transparent;
-  font-family: inter-bold;
+  font-family: "inter-bold";
   color: #ffffff;
+  transition: 0.2s;
 }
 
-
-.moeda .title{
+.moeda .title {
   font-size: 2.2rem;
 }
 
-.moeda .value{
+.moeda .value {
   font-size: 1.1rem;
 }
 
-.painel-moedas-box{
+.painel-moedas-box {
   position: relative;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  margin:0 auto;
+  margin: 0 auto;
   background-color: #505050;
 }
 
-.progresso{
+.progresso {
   position: absolute;
-  bottom:0;
-  left:0;
+  bottom: 0;
+  left: 0;
   width: 1%;
   height: 7px;
-  background-color: #FFA800;
+  background-color: #ffa800;
   transition: 0.2s;
   z-index: 3;
 }
 
-.botao{
+.botao {
   cursor: pointer;
   height: 100%;
-  background-color: #FF7A00;;
+  background-color: #ff7a00;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,40 +79,43 @@
   transition: 0.25s;
 }
 
-.botao:hover{
-  background-color: #ff932f;;
+.botao:hover {
+  background-color: #ff932f;
   transition: 0.25s;
 }
 
-.anterior{
-  transform: rotate(-180deg);
+.proximo{
+  border-radius: 0 0 10px 0;
 }
 
+.anterior {
+  transform: rotate(-180deg);
+  border-radius: 0 10px 0 0;
+}
 
-@media screen and (max-width:730px) {
-  .painel-moedas{
+@media screen and (max-width: 730px) {
+  .painel-moedas {
     height: 350px;
   }
 }
 
-
-@media screen and (max-width:680px) {
-  .moeda{
+@media screen and (max-width: 680px) {
+  .moeda {
     width: 100%;
   }
 }
 
-@media screen and (max-width:530px) {
-  .painel-moedas{
+@media screen and (max-width: 530px) {
+  .painel-moedas {
     height: 450px;
   }
 
-  .botao{
+  .botao {
     padding: 0;
   }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width: 400px) {
   .moeda .value {
     font-size: 1rem;
   }
